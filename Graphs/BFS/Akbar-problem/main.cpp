@@ -1,3 +1,5 @@
+// Problem link: https://www.spoj.com/problems/AKBAR/
+
 #include <bits/stdc++.h>
 using namespace std;
 
