@@ -27,11 +27,10 @@ void bfs_max_dist(int src, int dest, vector<int> adj[], vector<int> &dist_src, v
     while(!q.empty()) {
         int front = q.front();
         q.pop();
-        int b = dist_src[front]+1;
         for(auto it:adj[front]) {
             int c=min(max_dist_from_rob[front],dist_rob[it]);
-            if(dist_src[it]==-1 || (dist_src[it]>=b && max_dist_from_rob[it]<c)) {
-                dist_src[it]=b;
+            if(dist_src[it]==-1 || (max_dist_from_rob[it]<c)) {
+                dist_src[it]=dist_src[front]+1;
                 max_dist_from_rob[it]=c;
                 if(it != dest) {
                     q.push(it);
