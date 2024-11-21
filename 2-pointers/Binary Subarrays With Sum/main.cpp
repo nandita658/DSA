@@ -1,5 +1,8 @@
 // Problem statement: https://leetcode.com/problems/binary-subarrays-with-sum/
 
+// we are doing atmost as 0 is also there in the array which will give wrong
+// count, if we write the code for directly counting for goal.
+
 class Solution {
 public:
     int atMostCount (vector<int>&nums, int goal) {
